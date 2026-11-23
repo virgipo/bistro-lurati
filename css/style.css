@@ -473,3 +473,4 @@ p { margin: 0 0 1.1em; }
 .lang { background: rgba(14,26,51,.72); border: 1px solid rgba(241,232,216,.25); border-radius: 100px; padding: 2px 12px; }
 .nav.is-solid .lang { background: transparent; }
 .lang__btn { opacity: .7; }
+.green__img img { aspect-ratio: auto; }
