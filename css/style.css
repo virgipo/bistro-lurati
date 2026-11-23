@@ -294,7 +294,7 @@ p { margin: 0 0 1.1em; }
 .ig__head { text-align: center; margin-bottom: 46px; }
 .ig__handle { font-family: var(--display); font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.4rem); text-decoration: none; color: var(--navy); letter-spacing: .02em; }
 .ig__handle:hover { color: var(--bronze); }
-.ig__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.ig__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 900px; margin: 0 auto; }
 .ig__tile { position: relative; overflow: hidden; display: block; aspect-ratio: 3 / 4; background: var(--navy); }
 .ig__tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease), opacity .4s var(--ease); }
 .ig__tile:hover img { transform: scale(1.06); opacity: .85; }
@@ -372,4 +372,57 @@ p { margin: 0 0 1.1em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal, .hero__brand > * { opacity: 1; transform: none; }
+}
+
+/* ==========================================================
+   Revisione 3: piatti in evidenza, eventi, cortile, Instagram
+   ========================================================== */
+.plates { background: var(--paper); padding: clamp(90px, 12vw, 160px) 0; }
+.plates__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 3vw, 44px) clamp(20px, 2.4vw, 34px); }
+.plate { display: flex; flex-direction: column; }
+.plate--wide { grid-column: span 2; grid-row: span 2; }
+.plate__img { overflow: hidden; background: var(--navy); }
+.plate__img img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 1.2s var(--ease); }
+.plate--wide .plate__img img { aspect-ratio: 1.08; }
+.plate:hover .plate__img img { transform: scale(1.04); }
+.plate figcaption { padding-top: 18px; }
+.plate h3 { font-family: var(--display); font-weight: 500; font-size: 1.45rem; color: var(--navy); margin-bottom: 6px; }
+.plate--wide h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.plate p { margin: 0; font-size: .95rem; color: var(--muted); }
+
+.green { padding: clamp(80px, 10vw, 130px) 0; }
+
+.events { background: var(--navy); color: var(--cream); padding: clamp(90px, 12vw, 150px) 0; overflow: hidden; }
+.events__grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.events h2 { color: var(--cream); margin-bottom: 24px; }
+.events .lead { color: rgba(241,232,216,.88); }
+.events .btn { margin-top: 12px; }
+.events__imgs { position: relative; height: clamp(420px, 46vw, 600px); }
+.events__img { position: absolute; object-fit: cover; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+.events__img--a { left: 0; top: 0; width: 62%; height: 78%; }
+.events__img--b { right: 0; bottom: 0; width: 48%; height: 66%; border: 8px solid var(--navy); }
+
+.court { background: var(--cream); color: var(--text); padding: clamp(90px, 12vw, 150px) 0; }
+.court__grid2 { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.court__img2 img { width: 100%; aspect-ratio: 426 / 566; object-fit: cover; }
+.court__text2 h2 { color: var(--navy); margin-bottom: 24px; }
+
+.ig__follow { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; color: var(--navy); }
+.ig__icon { width: 34px; height: 34px; color: var(--bronze); }
+.ig__label { font-family: var(--brand); font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; color: var(--bronze); }
+.ig__follow:hover .ig__handle { color: var(--bronze); }
+.ig-inline { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.ig-inline svg { width: 18px; height: 18px; color: var(--bronze-2); }
+.ig-inline:hover { color: #fff; }
+.contact h2 { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .plates__grid { grid-template-columns: 1fr 1fr; }
+  .plate--wide { grid-column: 1 / -1; grid-row: auto; }
+  .events__grid, .court__grid2 { grid-template-columns: 1fr; }
+  .court__img2 { max-width: 460px; }
+}
+@media (max-width: 600px) {
+  .plates__grid { grid-template-columns: 1fr; }
+  .events__imgs { height: 420px; }
 }
