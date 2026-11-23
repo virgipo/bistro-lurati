@@ -3,6 +3,44 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---- Lingua IT / EN ---- */
+  const META = {
+    it: {
+      title: document.title,
+      desc: $('meta[name="description"]').getAttribute('content')
+    },
+    en: {
+      title: 'Bistró Lurati · Porlezza — Butchers since 1927',
+      desc: 'Bistró Lurati, in the heart of Porlezza on Lake Lugano: a family-run bistro by a family of butchers since 1927. Selected meat, homemade pasta, seasonal dishes, a courtyard and private events.'
+    }
+  };
+  const translatable = $$('[data-en]');
+  translatable.forEach(el => { el.dataset.it = el.innerHTML; });
+
+  const setLang = (lang) => {
+    translatable.forEach(el => { el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.it; });
+    document.documentElement.lang = lang;
+    document.title = META[lang].title;
+    $('meta[name="description"]').setAttribute('content', META[lang].desc);
+    $$('.lang__btn').forEach(b => {
+      const on = b.dataset.lang === lang;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  };
+  $$('.lang__btn').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+  let initial = 'it';
+  try {
+    const q = new URLSearchParams(location.search).get('lang');
+    const saved = localStorage.getItem('lang');
+    if (q === 'en' || q === 'it') initial = q;
+    else if (saved === 'en' || saved === 'it') initial = saved;
+    else if (!/^it\b/i.test(navigator.language || 'it')) initial = 'en';
+  } catch (e) {}
+  if (initial !== 'it') setLang(initial);
+
   /* ---- Nav: sfondo allo scroll + menu mobile ---- */
   const nav = $('.nav');
   const fab = $('.fab');
@@ -19,7 +57,6 @@
   const mobile = $('#mobileNav');
   const setMenu = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Chiudi menù' : 'Apri menù');
     mobile.hidden = !open;
     nav.classList.toggle('is-open', open);
   };
@@ -55,55 +92,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => io.observe(el));
   }
-
-  /* ---- Frollatura ---- */
-  const ages = [
-    { t: 'Fresca e succosa', d: 'Sapore pulito e fibra tenera: il gusto più vicino alla carne appena tagliata. Ideale per battute e carpacci.' },
-    { t: 'Equilibrio', d: 'La carne diventa più morbida e il sapore si concentra: il punto d’incontro tra succosità e carattere.' },
-    { t: 'Note di nocciola', d: 'Compaiono aromi tostati e di frutta secca, la consistenza si fa quasi burrosa. Per chi ama la bistecca.' },
-    { t: 'Per intenditori', d: 'Profumi intensi e profondi: una carne da gustare con calma, per palati curiosi.' }
-  ];
-  const tabs = $$('.aging__tabs button');
-  const fill = $('.aging__fill');
-  const panel = $('.aging__panel');
-  tabs.forEach((btn, i) => btn.addEventListener('click', () => {
-    tabs.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
-    fill.style.width = ((i + 1) / tabs.length * 100) + '%';
-    $('.aging__title').textContent = ages[i].t;
-    $('.aging__desc').textContent = ages[i].d;
-    panel.classList.remove('is-swapping'); void panel.offsetWidth; panel.classList.add('is-swapping');
-  }));
-
-  /* ---- Menù: anteprima foto al passaggio ---- */
-  const preview = $('.menu__previewimg');
-  const dishes = $$('.dish');
-  let current = preview ? preview.getAttribute('src') : '';
-  const show = (dish) => {
-    dishes.forEach(d => d.classList.toggle('is-active', d === dish));
-    const src = dish.dataset.img;
-    if (!preview || !src || src === current) return;
-    current = src;
-    preview.classList.add('is-fading');
-    const img = new Image();
-    img.onload = () => { preview.src = src; preview.classList.remove('is-fading'); };
-    img.src = src;
-  };
-  dishes.forEach(d => d.addEventListener('mouseenter', () => show(d)));
-
-  /* ---- Menù: filtro ---- */
-  const chips = $$('.chip');
-  const applyFilter = (f) => {
-    chips.forEach(c => c.classList.toggle('is-active', c.dataset.filter === f));
-    dishes.forEach(d => {
-      const tags = (d.dataset.tags || '').split(' ');
-      d.classList.toggle('is-dim', f !== 'all' && !tags.includes(f));
-    });
-    const first = dishes.find(d => !d.classList.contains('is-dim'));
-    if (first) show(first);
-  };
-  chips.forEach(c => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
-  const vegLink = $('[data-veg-link]');
-  if (vegLink) vegLink.addEventListener('click', () => applyFilter('veg'));
 
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();

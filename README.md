@@ -21,7 +21,7 @@ poi apri http://localhost:8000
 3. Ogni `git push` sul branch `main` aggiorna il sito.
 
 ## Da verificare con il ristorante
-- Orari esatti di pranzo e cena (ora: "Pranzo e cena, chiuso il mercoledì")
+- Orari: 12–14 e 19–22, mercoledì chiuso (confermati)
 - Piatti, descrizioni e tempi di frollatura effettivi
 - Foto originali ad alta risoluzione (ora ritagliate da Instagram)
 - Link diretto di prenotazione Google (quello nella bio Instagram)

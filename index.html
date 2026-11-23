@@ -39,6 +39,10 @@
       "addressCountry": "IT"
     },
     "acceptsReservations": "True",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"], "opens": "19:00", "closes": "22:00" }
+    ],
     "sameAs": ["https://www.instagram.com/bistro_lurati/"]
   }
   </script>
@@ -64,34 +68,41 @@
   </symbol>
 </svg>
 
-<a class="skip" href="#main">Vai al contenuto</a>
+<a class="skip" href="#main" data-en="Skip to content">Vai al contenuto</a>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="top">
   <div class="nav__inner">
-    <a href="#top" class="wordmark wordmark--nav" aria-label="Bistró Lurati, torna su">
+    <a href="#top" class="wordmark wordmark--nav" aria-label="Bistró Lurati">
       <span class="wordmark__line">Bistr<span class="o-dot">Ó</span></span>
       <span class="wordmark__line">Lurati</span>
     </a>
     <nav class="nav__links" aria-label="Navigazione principale">
-      <a href="#storia">La storia</a>
-      <a href="#piatti">I piatti</a>
-      <a href="#eventi">Eventi</a>
-      <a href="#cortile">Il cortile</a>
-      <a href="#contatti">Contatti</a>
+      <a href="#storia" data-en="Our story">La storia</a>
+      <a href="#piatti" data-en="Our dishes">I piatti</a>
+      <a href="#eventi" data-en="Events">Eventi</a>
+      <a href="#cortile" data-en="Courtyard">Il cortile</a>
+      <a href="#recensioni" data-en="Reviews">Recensioni</a>
+      <a href="#contatti" data-en="Contact">Contatti</a>
     </nav>
-    <a href="#contatti" class="btn btn--small nav__cta">Prenota</a>
-    <button class="nav__toggle" aria-label="Apri menù" aria-expanded="false" aria-controls="mobileNav">
+    <a href="#contatti" class="btn btn--small nav__cta" data-en="Book">Prenota</a>
+    <div class="lang" role="group" aria-label="Lingua / Language">
+      <button type="button" class="lang__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+      <span class="lang__sep" aria-hidden="true">|</span>
+      <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav__toggle" aria-label="Menù" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span>
     </button>
   </div>
   <div class="mobile-nav" id="mobileNav" hidden>
-    <a href="#storia">La storia</a>
-    <a href="#piatti">I piatti</a>
-    <a href="#eventi">Eventi</a>
-    <a href="#cortile">Il cortile</a>
-    <a href="#contatti">Contatti</a>
-    <a href="tel:+393471107745" class="btn">Chiama e prenota</a>
+    <a href="#storia" data-en="Our story">La storia</a>
+    <a href="#piatti" data-en="Our dishes">I piatti</a>
+    <a href="#eventi" data-en="Events">Eventi</a>
+    <a href="#cortile" data-en="Courtyard">Il cortile</a>
+    <a href="#recensioni" data-en="Reviews">Recensioni</a>
+    <a href="#contatti" data-en="Contact">Contatti</a>
+    <a href="tel:+393471107745" class="btn" data-en="Call to book">Chiama e prenota</a>
   </div>
 </header>
 
@@ -105,14 +116,14 @@
       <h1 class="wordmark wordmark--hero">
         <span class="wordmark__line">Bistr<span class="o-dot">Ó</span></span>
         <span class="wordmark__line">Lurati</span>
-        <span class="wordmark__tag">Macellai dal 1927</span>
+        <span class="wordmark__tag" data-en="Butchers since 1927">Macellai dal 1927</span>
       </h1>
       <svg class="orn orn--flip" aria-hidden="true"><use href="#orn"/></svg>
     </div>
-    <p class="hero__lead">Nel cuore di Porlezza, un luogo dove la tradizione incontra il gusto.<br><em>Per gli amanti della carne, e non solo.</em></p>
+    <p class="hero__lead" data-en="In the heart of Porlezza, a place where tradition meets taste.<br><em>For meat lovers, and not only.</em>">Nel cuore di Porlezza, un luogo dove la tradizione incontra il gusto.<br><em>Per gli amanti della carne, e non solo.</em></p>
     <div class="hero__actions">
-      <a href="#contatti" class="btn">Prenota un tavolo</a>
-      <a href="#piatti" class="btn btn--ghost">I nostri piatti</a>
+      <a href="#contatti" class="btn" data-en="Book a table">Prenota un tavolo</a>
+      <a href="#piatti" class="btn btn--ghost" data-en="Our dishes">I nostri piatti</a>
     </div>
   </div>
   <div class="hero__photo">
@@ -126,7 +137,7 @@
     <div class="story__quote reveal">
       <span class="story__year" aria-hidden="true">1927</span>
       <blockquote>
-        <p>Nel 1927 il nonno Lucio aveva un talento: riconoscere la carne buona <em>senza bisogno di parole.</em></p>
+        <p data-en="In 1927 grandpa Lucio had a gift: recognising good meat <em>without needing a word.</em>">Nel 1927 il nonno Lucio aveva un talento: riconoscere la carne buona <em>senza bisogno di parole.</em></p>
       </blockquote>
     </div>
 
@@ -136,10 +147,10 @@
         <figcaption>Stefano Lurati</figcaption>
       </figure>
       <div class="story__text reveal">
-        <p class="eyebrow">Una famiglia di macellai</p>
-        <h2>Puntiamo<br>sulla qualità</h2>
-        <p class="lead">Il Bistró Lurati nasce dalla voglia di Stefano di rendere omaggio al nonno macellaio. Da lui viene il rispetto per la carne e l’abitudine di scegliere con cura tutto quello che arriva in tavola.</p>
-        <p>Oggi è un bistrò di famiglia nel centro di Porlezza: carne selezionata, pasta fatta in casa, piatti che seguono le stagioni e una sala tenuta con attenzione, ogni giorno.</p>
+        <p class="eyebrow" data-en="A family of butchers">Una famiglia di macellai</p>
+        <h2 data-en="Quality<br>first">Puntiamo<br>sulla qualità</h2>
+        <p class="lead" data-en="Bistró Lurati was born from Stefano’s wish to honour his grandfather, a butcher. From him comes a deep respect for meat and the habit of carefully choosing everything that reaches the table.">Il Bistró Lurati nasce dalla voglia di Stefano di rendere omaggio al nonno macellaio. Da lui viene il rispetto per la carne e l’abitudine di scegliere con cura tutto quello che arriva in tavola.</p>
+        <p data-en="Today it is a family-run bistro in the centre of Porlezza: selected meat, homemade pasta, dishes that follow the seasons and a dining room looked after with care, every day.">Oggi è un bistrò di famiglia nel centro di Porlezza: carne selezionata, pasta fatta in casa, piatti che seguono le stagioni e una sala tenuta con attenzione, ogni giorno.</p>
       </div>
     </div>
   </div>
@@ -150,51 +161,51 @@
   <div class="wrap">
     <header class="section-head reveal">
       <svg class="orn orn--small orn--bronze" aria-hidden="true"><use href="#orn"/></svg>
-      <h2>I nostri piatti</h2>
-      <p class="section-head__lead">La carta cambia con le stagioni. Questi sono alcuni dei piatti che i nostri ospiti hanno amato di più.</p>
+      <h2 data-en="Our dishes">I nostri piatti</h2>
+      <p class="section-head__lead" data-en="Our menu changes with the seasons. These are some of the dishes our guests have loved the most.">La carta cambia con le stagioni. Questi sono alcuni dei piatti che i nostri ospiti hanno amato di più.</p>
     </header>
 
     <div class="plates__grid">
       <figure class="plate plate--wide reveal">
         <div class="plate__img"><img src="assets/img/fassona-piselli.jpg" alt="Battuta di Fassona Piemontese con piselli novelli e mandorle" loading="lazy"></div>
         <figcaption>
-          <h3>Battuta di Fassona Piemontese</h3>
-          <p>Crema vellutata di piselli novelli, fonduta leggera di Semüdin, mandorle salate tostate.</p>
+          <h3 data-en="Hand-cut Piedmontese Fassona tartare">Battuta di Fassona Piemontese</h3>
+          <p data-en="Velvety spring pea cream, light Semüdin fondue, toasted salted almonds.">Crema vellutata di piselli novelli, fonduta leggera di Semüdin, mandorle salate tostate.</p>
         </figcaption>
       </figure>
       <figure class="plate reveal">
         <div class="plate__img"><img src="assets/img/ravioli-radicchio.jpg" alt="Ravioli al radicchio tardivo con crema di Parmigiano e nocciole" loading="lazy"></div>
         <figcaption>
-          <h3>Ravioli al radicchio tardivo</h3>
-          <p>Crema di Parmigiano, Zincarlin e nocciole tostate.</p>
+          <h3 data-en="Late radicchio ravioli">Ravioli al radicchio tardivo</h3>
+          <p data-en="Parmigiano cream, Zincarlin cheese and toasted hazelnuts.">Crema di Parmigiano, Zincarlin e nocciole tostate.</p>
         </figcaption>
       </figure>
       <figure class="plate reveal">
         <div class="plate__img"><img src="assets/img/spaghetti-broccoli.jpg" alt="Spaghetti artigianali con crema di broccoli, salsiccia e cialde di Parmigiano" loading="lazy"></div>
         <figcaption>
-          <h3>Spaghetti artigianali</h3>
-          <p>Crema di broccoli, salsiccia scottata e cialde di Parmigiano.</p>
+          <h3 data-en="Artisan spaghetti">Spaghetti artigianali</h3>
+          <p data-en="Broccoli cream, seared sausage and Parmigiano crisps.">Crema di broccoli, salsiccia scottata e cialde di Parmigiano.</p>
         </figcaption>
       </figure>
       <figure class="plate reveal">
         <div class="plate__img"><img src="assets/img/tartare.jpg" alt="Battuta di Fassona al coltello con zucca e porcini" loading="lazy"></div>
         <figcaption>
-          <h3>Fassona al coltello</h3>
-          <p>Soffice di zucca e crumble ai porcini.</p>
+          <h3 data-en="Knife-cut Fassona">Fassona al coltello</h3>
+          <p data-en="Pumpkin mousse and porcini crumble.">Soffice di zucca e crumble ai porcini.</p>
         </figcaption>
       </figure>
       <figure class="plate reveal">
         <div class="plate__img"><img src="assets/img/burger.jpg" alt="Il burger del Bistró servito in sala" loading="lazy"></div>
         <figcaption>
-          <h3>Il burger del Bistró</h3>
-          <p>Pane morbido, chips croccanti e insalatina.</p>
+          <h3 data-en="The Bistró burger">Il burger del Bistró</h3>
+          <p data-en="Soft bun, crispy chips and greens.">Pane morbido, chips croccanti e insalatina.</p>
         </figcaption>
       </figure>
       <figure class="plate reveal">
         <div class="plate__img"><img src="assets/img/pasta-ragu.jpg" alt="Pappardelle al ragù di cervo" loading="lazy"></div>
         <figcaption>
-          <h3>Pappardelle al ragù di cervo</h3>
-          <p>Pasta artigianale e un ragù cotto lentamente.</p>
+          <h3 data-en="Pappardelle with venison ragù">Pappardelle al ragù di cervo</h3>
+          <p data-en="Artisan pasta and a slow-cooked ragù.">Pasta artigianale e un ragù cotto lentamente.</p>
         </figcaption>
       </figure>
     </div>
@@ -208,10 +219,10 @@
       <img src="assets/img/fiori-zucca.jpg" alt="Fiori di zucca fritti su crema, uno dei fuori menù" loading="lazy">
     </figure>
     <div class="green__text reveal">
-      <p class="eyebrow">Fuori menù &amp; vegetariano</p>
-      <h2>…e non solo<br>carne</h2>
-      <p class="lead">Oltre alla carta, proponiamo sfiziosi fuori menù preparati con ingredienti freschi, secondo disponibilità.</p>
-      <p>E ci sono sempre piatti vegetariani, preparati con la stessa cura di tutti gli altri.</p>
+      <p class="eyebrow" data-en="Specials &amp; vegetarian">Fuori menù &amp; vegetariano</p>
+      <h2 data-en="…and not<br>only meat">…e non solo<br>carne</h2>
+      <p class="lead" data-en="Beyond the menu, we offer tasty daily specials made with fresh ingredients, depending on availability.">Oltre alla carta, proponiamo sfiziosi fuori menù preparati con ingredienti freschi, secondo disponibilità.</p>
+      <p data-en="And there are always vegetarian dishes, prepared with the same care as all the others.">E ci sono sempre piatti vegetariani, preparati con la stessa cura di tutti gli altri.</p>
     </div>
   </div>
 </section>
@@ -221,10 +232,10 @@
   <div class="wrap events__grid">
     <div class="events__text reveal">
       <svg class="orn orn--small" aria-hidden="true"><use href="#orn"/></svg>
-      <h2>Eventi<br>al Bistró</h2>
-      <p class="lead">Un compleanno, un anniversario, una cena di lavoro o una festa tra amici: il Bistró e il cortile possono ospitare il tuo evento.</p>
-      <p class="muted-light">Raccontaci cosa hai in mente e prepariamo insieme il menù.</p>
-      <a href="https://wa.me/393471107745?text=Buongiorno%2C%20vorrei%20informazioni%20per%20organizzare%20un%20evento%20al%20Bistr%C3%B3%20Lurati" class="btn btn--light" target="_blank" rel="noopener">Chiedi informazioni</a>
+      <h2 data-en="Events<br>at the Bistró">Eventi<br>al Bistró</h2>
+      <p class="lead" data-en="A birthday, an anniversary, a business dinner or a party with friends: the Bistró and its courtyard can host your event.">Un compleanno, un anniversario, una cena di lavoro o una festa tra amici: il Bistró e il cortile possono ospitare il tuo evento.</p>
+      <p class="muted-light" data-en="Tell us what you have in mind and we’ll put the menu together with you.">Raccontaci cosa hai in mente e prepariamo insieme il menù.</p>
+      <a href="tel:+393471107745" class="btn btn--light" data-en="Call us for information">Chiamaci per informazioni</a>
     </div>
     <div class="events__imgs reveal">
       <img class="events__img events__img--a" src="assets/img/salumi.jpg" alt="Tagliere di salumi e formaggi" loading="lazy">
@@ -238,10 +249,10 @@
   <div class="wrap court__grid2">
     <figure class="court__img2 reveal"><img src="assets/img/cortile-1.jpg" alt="Focaccia farcita servita nel cortile, tra piante e cactus" loading="lazy"></figure>
     <div class="court__text2 reveal">
-      <p class="eyebrow">All’aperto</p>
-      <h2>Il cortile</h2>
-      <p class="lead">Un angolo verde nel centro storico di Porlezza, a due passi dal lago. Nella bella stagione si pranza e si cena all’aperto.</p>
-      <p>Dentro, la sala: muri in pietra, parquet a spina di pesce e luce calda.</p>
+      <p class="eyebrow" data-en="Outdoors">All’aperto</p>
+      <h2 data-en="The courtyard">Il cortile</h2>
+      <p class="lead" data-en="A green corner in the old town of Porlezza, just steps from the lake. In the warmer months, lunch and dinner are served outdoors.">Un angolo verde nel centro storico di Porlezza, a due passi dal lago. Nella bella stagione si pranza e si cena all’aperto.</p>
+      <p data-en="Inside, the dining room: stone walls, herringbone parquet and warm light.">Dentro, la sala: muri in pietra, parquet a spina di pesce e luce calda.</p>
     </div>
   </div>
 </section>
@@ -252,7 +263,7 @@
     <header class="ig__head reveal">
       <a href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener" class="ig__follow">
         <svg class="ig__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
-        <span class="ig__label">Seguici su Instagram</span>
+        <span class="ig__label" data-en="Follow us on Instagram">Seguici su Instagram</span>
         <span class="ig__handle">@bistro_lurati</span>
       </a>
     </header>
@@ -272,21 +283,23 @@
   <div class="wrap contact__grid">
     <div class="contact__info reveal">
       <svg class="orn orn--small" aria-hidden="true"><use href="#orn"/></svg>
-      <h2>Prenota<br>il tuo tavolo</h2>
+      <h2 data-en="Book<br>your table">Prenota<br>il tuo tavolo</h2>
 
       <div class="contact__actions">
-        <a href="tel:+393471107745" class="btn btn--light">Chiama +39 347 110 7745</a>
-        <a href="https://wa.me/393471107745?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Bistr%C3%B3%20Lurati" class="btn btn--ghost" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+        <a href="tel:+393471107745" class="btn btn--light" data-en="Call +39 347 110 7745">Chiama +39 347 110 7745</a>
       </div>
 
       <dl class="facts">
         <div>
-          <dt>Dove</dt>
+          <dt data-en="Where">Dove</dt>
           <dd>Via Giuseppe Garibaldi 10<br>22018 Porlezza (CO)</dd>
         </div>
         <div>
-          <dt>Orari</dt>
-          <dd>Pranzo e cena<br><span class="muted-light">Chiuso il mercoledì</span></dd>
+          <dt data-en="Opening hours">Orari</dt>
+          <dd>
+            <span data-en="Monday – Sunday">Lunedì – domenica</span><br>12:00 – 14:00<br>19:00 – 22:00<br>
+            <span class="muted-light" data-en="Closed on Wednesday">Mercoledì chiuso</span>
+          </dd>
         </div>
         <div>
           <dt>Instagram</dt>
@@ -297,8 +310,35 @@
     <div class="contact__map reveal">
       <iframe title="Mappa: Bistró Lurati, Via Garibaldi 10, Porlezza" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Bistro%20Lurati%2C%20Via%20Giuseppe%20Garibaldi%2010%2C%2022018%20Porlezza%20CO&z=16&output=embed"></iframe>
-      <a class="link-arrow link-arrow--light" href="https://www.google.com/maps/search/?api=1&query=Bistro+Lurati+Via+Garibaldi+10+Porlezza" target="_blank" rel="noopener">Indicazioni stradali</a>
+      <a class="link-arrow link-arrow--light" href="https://www.google.com/maps/search/?api=1&query=Bistro+Lurati+Via+Garibaldi+10+Porlezza" target="_blank" rel="noopener" data-en="Get directions">Indicazioni stradali</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ RECENSIONI ============ -->
+<section class="reviews" id="recensioni">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <svg class="orn orn--small orn--bronze" aria-hidden="true"><use href="#orn"/></svg>
+      <h2 data-en="What our guests say">Dicono di noi</h2>
+    </header>
+    <div class="reviews__grid">
+      <figure class="review reveal">
+        <blockquote>“One of the best restaurants where I have ever eaten meat. Every time we come it is always a pleasure. Excellent quality meat, very nice and quiet place, super helpful owner.”</blockquote>
+        <figcaption>Tripadvisor</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <blockquote>“Davvero un ristorante di livello, quello che mancava alla cittadina di Porlezza.”</blockquote>
+        <figcaption data-en="Online review">Recensione online</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <blockquote>“Personale gentile e con ottima attenzione al cliente.”</blockquote>
+        <figcaption data-en="Online review">Recensione online</figcaption>
+      </figure>
+    </div>
+    <p class="reviews__more reveal">
+      <a class="link-arrow" href="https://www.tripadvisor.it/Restaurant_Review-g1077989-d15747633-Reviews-Bistro_Lurati-Porlezza_Province_of_Como_Lombardy.html" target="_blank" rel="noopener" data-en="Read all reviews">Leggi tutte le recensioni</a>
+    </p>
   </div>
 </section>
 
@@ -310,16 +350,16 @@
       <svg class="orn orn--tiny" aria-hidden="true"><use href="#orn"/></svg>
       <span class="wordmark wordmark--footer">
         <span class="wordmark__line">Bistr<span class="o-dot">Ó</span> Lurati</span>
-        <span class="wordmark__tag">Macellai dal 1927</span>
+        <span class="wordmark__tag" data-en="Butchers since 1927">Macellai dal 1927</span>
       </span>
     </div>
-    <p class="footer__small">Via Giuseppe Garibaldi 10 · 22018 Porlezza (CO) · +39 347 110 7745<br>© <span id="year">2026</span> Bistró Lurati · <a href="#top">Torna su</a></p>
+    <p class="footer__small">Via Giuseppe Garibaldi 10 · 22018 Porlezza (CO) · +39 347 110 7745<br>© <span id="year">2026</span> Bistró Lurati · <a href="#top" data-en="Back to top">Torna su</a></p>
   </div>
 </footer>
 
 <a href="tel:+393471107745" class="fab" aria-label="Chiama per prenotare">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-  <span>Prenota</span>
+  <span data-en="Book">Prenota</span>
 </a>
 
 <script src="js/main.js" defer></script>

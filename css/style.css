@@ -426,3 +426,24 @@ p { margin: 0 0 1.1em; }
   .plates__grid { grid-template-columns: 1fr; }
   .events__imgs { height: 420px; }
 }
+
+/* ---------- Lingua ---------- */
+.lang { display: flex; align-items: center; gap: 6px; font-family: var(--brand); font-size: .74rem; letter-spacing: .16em; }
+.lang__btn { background: none; border: 0; padding: 6px 2px; cursor: pointer; color: inherit; font: inherit; letter-spacing: inherit; opacity: .55; transition: opacity .3s var(--ease); }
+.lang__btn:hover { opacity: .9; }
+.lang__btn.is-active { opacity: 1; border-bottom: 1px solid var(--bronze-2); }
+.lang__sep { opacity: .35; }
+
+/* ---------- Recensioni ---------- */
+.reviews { background: var(--paper); padding: clamp(90px, 12vw, 150px) 0; }
+.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(30px, 4vw, 60px); }
+.review { margin: 0; text-align: center; padding: 0 6px; display: flex; flex-direction: column; }
+.review blockquote { margin: 0 0 18px; font-family: var(--display); font-style: italic; font-size: 1.5rem; line-height: 1.35; color: var(--navy); }
+.review blockquote::before { content: ""; display: block; width: 26px; height: 1px; background: var(--bronze); margin: 0 auto 22px; }
+.review figcaption { margin-top: auto; font-family: var(--brand); font-size: .7rem; letter-spacing: .26em; text-transform: uppercase; color: var(--bronze); }
+.reviews__more { text-align: center; margin: 56px 0 0; }
+
+@media (max-width: 900px) {
+  .lang { margin-left: auto; }
+  .reviews__grid { grid-template-columns: 1fr; gap: 50px; }
+}
