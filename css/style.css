@@ -491,4 +491,4 @@ p { margin: 0 0 1.1em; }
 .pullquote figcaption { font-family: var(--brand); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--bronze); display: flex; align-items: center; gap: 14px; }
 .pullquote figcaption::before { content: ""; width: 34px; height: 1px; background: var(--bronze); }
 .green__img img { aspect-ratio: 1; object-fit: cover; }
-.story__portrait img { aspect-ratio: 4 / 5; object-position: 60% 20%; }
+.story__portrait img { aspect-ratio: 4 / 5; object-position: 40% 20%; }
