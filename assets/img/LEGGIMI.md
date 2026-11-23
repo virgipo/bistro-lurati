@@ -6,7 +6,8 @@ Per la versione definitiva sostituiscile con gli **originali** mantenendo **gli 
 
 | File | Dove appare |
 |---|---|
-| hero.jpg | Apertura (costata con osso) |
+| hero.jpg | Apertura (tavolo con candele) |
+| costata.jpg | I nostri piatti: la carne alla brace |
 | stefano.jpg | "Puntiamo sulla qualità" |
 | tartare.jpg | La carne + menù |
 | fiori-zucca.jpg | …e non solo carne |

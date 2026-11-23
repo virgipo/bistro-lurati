@@ -447,3 +447,26 @@ p { margin: 0 0 1.1em; }
   .lang { margin-left: auto; }
   .reviews__grid { grid-template-columns: 1fr; gap: 50px; }
 }
+
+/* ---------- Lettera di Stefano ---------- */
+.letter { border-left: 1px solid var(--bronze); padding-left: 26px; }
+.letter .lead { font-family: var(--display); font-size: 1.32rem; line-height: 1.5; color: var(--navy); }
+.letter p { margin-bottom: 1em; }
+.signature { font-family: var(--display); font-style: italic; font-size: 1.3rem; color: var(--bronze); margin-top: 22px; }
+.signature__name { color: var(--navy); font-style: normal; font-size: 1.1rem; letter-spacing: .04em; }
+
+/* ---------- Recensioni Google ---------- */
+.reviews__grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.review { text-align: left; background: #fff; border: 1px solid var(--sand); padding: 30px 28px 26px; }
+.review blockquote { font-family: var(--sans); font-style: normal; font-size: .98rem; line-height: 1.7; color: var(--text); margin: 14px 0 22px; }
+.review blockquote::before { display: none; }
+.review__stars { color: var(--bronze); letter-spacing: .2em; font-size: .9rem; }
+.review figcaption { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; border-top: 1px solid var(--sand); text-transform: none; letter-spacing: 0; }
+.review figcaption strong { font-family: var(--display); font-size: 1.2rem; font-weight: 500; color: var(--navy); }
+.review figcaption span { font-family: var(--brand); font-size: .66rem; letter-spacing: .22em; text-transform: uppercase; color: var(--bronze); }
+@media (max-width: 1080px) { .reviews__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .reviews__grid { grid-template-columns: 1fr; } .letter { padding-left: 18px; } }
+
+/* Leggibilità del menù sopra la foto */
+.nav::before { content: ""; position: absolute; inset: 0 0 -30px 0; background: linear-gradient(180deg, rgba(10,12,17,.55), transparent); pointer-events: none; z-index: -1; transition: opacity .4s var(--ease); }
+.nav.is-solid::before, .nav.is-open::before { opacity: 0; }
