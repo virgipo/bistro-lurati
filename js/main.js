@@ -3,7 +3,8 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- Lingua IT / EN ---- */
+  /* ---- Lingua IT / EN / DE ---- */
+  const LANGS = ['it', 'en', 'de'];
   const META = {
     it: {
       title: document.title,
@@ -12,13 +13,18 @@
     en: {
       title: 'Bistró Lurati · Porlezza — Butchers since 1927',
       desc: 'Bistró Lurati, in the heart of Porlezza on Lake Lugano: a family-run bistro by a family of butchers since 1927. Selected meat, homemade pasta, seasonal dishes, a courtyard and private events.'
+    },
+    de: {
+      title: 'Bistró Lurati · Porlezza — Metzger seit 1927',
+      desc: 'Bistró Lurati im Herzen von Porlezza am Luganersee: ein Familienbistro einer Metzgerfamilie seit 1927. Ausgewähltes Fleisch, hausgemachte Pasta, saisonale Gerichte, ein Innenhof und private Events.'
     }
   };
   const translatable = $$('[data-en]');
   translatable.forEach(el => { el.dataset.it = el.innerHTML; });
 
   const setLang = (lang) => {
-    translatable.forEach(el => { el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.it; });
+    if (!LANGS.includes(lang)) lang = 'it';
+    translatable.forEach(el => { el.innerHTML = el.dataset[lang] || el.dataset.it; });
     document.documentElement.lang = lang;
     document.title = META[lang].title;
     $('meta[name="description"]').setAttribute('content', META[lang].desc);
@@ -35,9 +41,11 @@
   try {
     const q = new URLSearchParams(location.search).get('lang');
     const saved = localStorage.getItem('lang');
-    if (q === 'en' || q === 'it') initial = q;
-    else if (saved === 'en' || saved === 'it') initial = saved;
-    else if (!/^it\b/i.test(navigator.language || 'it')) initial = 'en';
+    const nav2 = (navigator.language || 'it').slice(0, 2).toLowerCase();
+    if (LANGS.includes(q)) initial = q;
+    else if (LANGS.includes(saved)) initial = saved;
+    else if (nav2 === 'de') initial = 'de';
+    else if (nav2 !== 'it') initial = 'en';
   } catch (e) {}
   if (initial !== 'it') setLang(initial);
 
