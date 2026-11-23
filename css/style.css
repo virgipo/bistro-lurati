@@ -493,7 +493,5 @@ p { margin: 0 0 1.1em; }
 .green__img img { aspect-ratio: 1; object-fit: cover; }
 .story__portrait img { aspect-ratio: 4 / 5; object-position: 40% 20%; }
 
-/* Foto di Stefano leggermente inclinata */
-.story__portrait { transform: rotate(-3deg); transform-origin: center; box-shadow: 0 24px 50px -24px rgba(14,26,51,.45); }
-.story__portrait.reveal.is-in { transform: rotate(-3deg); }
-@media (max-width: 600px) { .story__portrait, .story__portrait.reveal.is-in { transform: rotate(-2deg); } }
+/* Foto di Stefano dritta, con ombra leggera */
+.story__portrait { box-shadow: 0 24px 50px -24px rgba(14,26,51,.45); }
