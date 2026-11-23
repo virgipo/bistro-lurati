@@ -1,6 +1,6 @@
-# Bistrò Lurati · Porlezza — sito web
+# Bistró Lurati · Porlezza — sito web
 
-Sito statico (HTML + CSS + JS, nessuna dipendenza) per il Bistrò Lurati, Via Giuseppe Garibaldi 10, Porlezza (CO).
+Sito statico (HTML + CSS + JS, nessuna dipendenza) per il Bistró Lurati (Macellai dal 1927), Via Giuseppe Garibaldi 10, Porlezza (CO).
 
 ## Struttura
 - `index.html`: tutte le sezioni (Storia, La carne, Menù, Vegetariano, Il locale, Recensioni, Contatti)
@@ -23,5 +23,6 @@ poi apri http://localhost:8000
 ## Da verificare con il ristorante
 - Orari esatti di pranzo e cena (ora: "Pranzo e cena, chiuso il mercoledì")
 - Piatti, descrizioni e tempi di frollatura effettivi
-- Testo esatto delle recensioni (ora sono titoli/estratti da Tripadvisor)
-- Foto ufficiali (dall'archivio Instagram del locale)
+- Foto originali ad alta risoluzione (ora ritagliate da Instagram)
+- Link diretto di prenotazione Google (quello nella bio Instagram)
+- File originale del logo (ora ricostruito con font simili)

@@ -3,30 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bistrò Lurati · Porlezza — Carne, tempo e famiglia</title>
-  <meta name="description" content="Bistrò Lurati a Porlezza, sul Lago di Lugano: ristorante di famiglia dedicato alla carne frollata, con pane e pasta fatti in casa, menù stagionali e proposte vegetariane. Via Garibaldi 10.">
-  <meta name="theme-color" content="#16120f">
+  <title>Bistró Lurati · Porlezza — Macellai dal 1927</title>
+  <meta name="description" content="Bistró Lurati, nel cuore di Porlezza: un luogo dove la tradizione incontra il gusto. Carne selezionata da una famiglia di macellai dal 1927, pasta artigianale, menù stagionali, il cortile e proposte vegetariane.">
+  <meta name="theme-color" content="#0e1a33">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="restaurant">
-  <meta property="og:title" content="Bistrò Lurati · Porlezza">
-  <meta property="og:description" content="Carne frollata, pasta fatta a mano e menù che seguono le stagioni. Un bistrò di famiglia a due passi dal lago.">
-  <meta property="og:image" content="assets/img/hero.jpg">
+  <meta property="og:title" content="Bistró Lurati · Porlezza — Macellai dal 1927">
+  <meta property="og:description" content="Nel cuore di Porlezza, un luogo dove la tradizione incontra il gusto. Per gli amanti della carne e non solo.">
+  <meta property="og:image" content="/assets/img/hero.jpg">
   <meta property="og:locale" content="it_IT">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Bistrò Lurati",
-    "image": "assets/img/hero.jpg",
-    "servesCuisine": ["Italiana", "Carne", "Stagionale"],
+    "name": "Bistró Lurati",
+    "slogan": "Macellai dal 1927",
+    "description": "Nel cuore di Porlezza, un luogo dove la tradizione incontra il gusto. Per gli amanti della carne e non solo.",
+    "image": "/assets/img/hero.jpg",
+    "servesCuisine": ["Italiana", "Carne", "Cucina stagionale"],
     "telephone": "+39 347 110 7745",
+    "founder": { "@type": "Person", "name": "Stefano Lurati" },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Giuseppe Garibaldi 10",
@@ -35,7 +38,6 @@
       "addressRegion": "CO",
       "addressCountry": "IT"
     },
-    "geo": { "@type": "GeoCoordinates", "latitude": 46.0377, "longitude": 9.1290 },
     "acceptsReservations": "True",
     "sameAs": ["https://www.instagram.com/bistro_lurati/"]
   }
@@ -43,34 +45,53 @@
 </head>
 <body>
 
+<!-- Ornamento del logo, riutilizzato in tutta la pagina -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="orn" viewBox="0 0 120 40">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M60 30 C 52 30, 46 22, 38 22 C 30 22, 26 28, 20 28 C 14 28, 11 24, 13 21 C 15 18, 20 19, 19 23"/>
+      <path d="M60 30 C 68 30, 74 22, 82 22 C 90 22, 94 28, 100 28 C 106 28, 109 24, 107 21 C 105 18, 100 19, 101 23"/>
+      <path d="M60 30 C 56 24, 50 14, 42 13 C 36 12, 33 17, 36 19"/>
+      <path d="M60 30 C 64 24, 70 14, 78 13 C 84 12, 87 17, 84 19"/>
+    </g>
+    <g fill="currentColor">
+      <path d="M30 22 C 26 15, 30 10, 34 11 C 33 15, 32 19, 30 22Z"/>
+      <path d="M90 22 C 94 15, 90 10, 86 11 C 87 15, 88 19, 90 22Z"/>
+      <circle cx="60" cy="20" r="2.6"/>
+      <circle cx="60" cy="11" r="1.9"/>
+      <circle cx="60" cy="4" r="1.3"/>
+    </g>
+  </symbol>
+</svg>
+
 <a class="skip" href="#main">Vai al contenuto</a>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="top">
   <div class="nav__inner">
-    <a href="#top" class="brand" aria-label="Bistrò Lurati, torna su">
-      <span class="brand__name">Bistrò Lurati</span>
-      <span class="brand__place">Porlezza</span>
+    <a href="#top" class="wordmark wordmark--nav" aria-label="Bistró Lurati, torna su">
+      <span class="wordmark__line">Bistr<span class="o-dot">Ó</span></span>
+      <span class="wordmark__line">Lurati</span>
     </a>
     <nav class="nav__links" aria-label="Navigazione principale">
-      <a href="#storia">Storia</a>
+      <a href="#storia">Dal 1927</a>
       <a href="#carne">La carne</a>
       <a href="#menu">Menù</a>
-      <a href="#verde">Vegetariano</a>
-      <a href="#locale">Il locale</a>
+      <a href="#non-solo">Non solo carne</a>
+      <a href="#cortile">Il cortile</a>
       <a href="#contatti">Contatti</a>
     </nav>
-    <a href="tel:+393471107745" class="btn btn--small nav__cta">Prenota</a>
+    <a href="#contatti" class="btn btn--small nav__cta">Prenota</a>
     <button class="nav__toggle" aria-label="Apri menù" aria-expanded="false" aria-controls="mobileNav">
       <span></span><span></span>
     </button>
   </div>
   <div class="mobile-nav" id="mobileNav" hidden>
-    <a href="#storia">Storia</a>
+    <a href="#storia">Dal 1927</a>
     <a href="#carne">La carne</a>
     <a href="#menu">Menù</a>
-    <a href="#verde">Vegetariano</a>
-    <a href="#locale">Il locale</a>
+    <a href="#non-solo">Non solo carne</a>
+    <a href="#cortile">Il cortile</a>
     <a href="#contatti">Contatti</a>
     <a href="tel:+393471107745" class="btn">Chiama e prenota</a>
   </div>
@@ -80,134 +101,114 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero__media photo" style="--img:url('/assets/img/hero.jpg')" role="img" aria-label="La sala del Bistrò Lurati apparecchiata"></div>
-  <div class="hero__veil"></div>
-  <div class="hero__content">
-    <p class="eyebrow eyebrow--light">Porlezza · Lago di Lugano</p>
-    <h1 class="hero__title">Carne, tempo<br><em>e famiglia.</em></h1>
-    <p class="hero__lead">Un bistrò nato dal banco di una macelleria: tagli scelti e frollati con pazienza, pane e pasta fatti in casa, un menù che cambia con le stagioni.</p>
+  <div class="hero__brand">
+    <div class="hero__logo">
+      <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+      <h1 class="wordmark wordmark--hero">
+        <span class="wordmark__line">Bistr<span class="o-dot">Ó</span></span>
+        <span class="wordmark__line">Lurati</span>
+        <span class="wordmark__tag">Macellai dal 1927</span>
+      </h1>
+      <svg class="orn orn--flip" aria-hidden="true"><use href="#orn"/></svg>
+    </div>
+    <p class="hero__lead">Nel cuore di Porlezza, un luogo dove la tradizione incontra il gusto.<br><em>Per gli amanti della carne, e non solo.</em></p>
     <div class="hero__actions">
       <a href="#contatti" class="btn">Prenota un tavolo</a>
-      <a href="#menu" class="btn btn--ghost">Scopri il menù</a>
+      <a href="#menu" class="btn btn--ghost">Il nuovo menù</a>
     </div>
   </div>
-  <a href="#manifesto" class="hero__scroll" aria-label="Scorri">
-    <span></span>
-  </a>
-</section>
-
-<!-- ============ MANIFESTO ============ -->
-<section class="manifesto" id="manifesto">
-  <div class="wrap">
-    <ul class="pillars">
-      <li class="pillar reveal">
-        <span class="pillar__num">01</span>
-        <h3>Conduzione familiare</h3>
-        <p>Chi ti accoglie è chi ha pensato ogni piatto. Ti chiamiamo per nome, la seconda volta.</p>
-      </li>
-      <li class="pillar reveal">
-        <span class="pillar__num">02</span>
-        <h3>Frollatura</h3>
-        <p>Selezioniamo le carni come faceva il nonno macellaio e diamo a ogni taglio il tempo che merita.</p>
-      </li>
-      <li class="pillar reveal">
-        <span class="pillar__num">03</span>
-        <h3>Fatto in casa</h3>
-        <p>Pane, pasta fresca, ripieni e dolci nascono ogni giorno nella nostra cucina.</p>
-      </li>
-      <li class="pillar reveal">
-        <span class="pillar__num">04</span>
-        <h3>Le stagioni</h3>
-        <p>Il menù segue il calendario del lago e delle valli: ingredienti al loro momento migliore.</p>
-      </li>
-    </ul>
+  <div class="hero__photo">
+    <img src="assets/img/hero.jpg" alt="Costata con osso, patate al forno e un calice di rosso, su un tavolo davanti al muro in pietra" fetchpriority="high">
   </div>
 </section>
 
 <!-- ============ STORIA ============ -->
 <section class="story" id="storia">
-  <div class="wrap story__grid">
-    <div class="story__media reveal">
-      <div class="photo photo--tall" style="--img:url('/assets/img/famiglia.jpg')" role="img" aria-label="La famiglia Lurati"></div>
-      <div class="photo photo--inset" style="--img:url('/assets/img/dettaglio-carne.jpg')" role="img" aria-label="Un taglio di carne frollata"></div>
+  <div class="wrap">
+    <div class="story__quote reveal">
+      <span class="story__year" aria-hidden="true">1927</span>
+      <blockquote>
+        <p>Nel 1927 il nonno Lucio aveva un talento: riconoscere la carne buona <em>senza bisogno di parole.</em></p>
+      </blockquote>
     </div>
-    <div class="story__text reveal">
-      <p class="eyebrow">La nostra storia</p>
-      <h2>Un omaggio<br><em>al nonno macellaio.</em></h2>
-      <p class="lead">Il Bistrò Lurati nasce dalla volontà di Stefano Lurati di rendere omaggio al nonno, macellaio. Da lui abbiamo ereditato il rispetto per l’animale, l’occhio per il taglio giusto e la convinzione che la qualità non si improvvisa.</p>
-      <p>Oggi quella stessa cura si ritrova in ogni dettaglio: nella scelta delle carni e nei loro tempi di frollatura, nella pasta tirata a mano, nella tovaglia stirata e nella sala sempre in ordine. È un locale piccolo, a pochi passi dal lungolago di Porlezza, pensato per chi ama mangiare bene senza fretta.</p>
-      <p class="signature">— Stefano Lurati e famiglia</p>
+
+    <div class="story__grid">
+      <figure class="story__portrait reveal">
+        <img src="assets/img/stefano.jpg" alt="Stefano Lurati" loading="lazy">
+        <figcaption>Stefano Lurati</figcaption>
+      </figure>
+      <div class="story__text reveal">
+        <p class="eyebrow">Una famiglia di macellai</p>
+        <h2>Puntiamo<br>sulla qualità</h2>
+        <p class="lead">Il Bistró Lurati nasce dalla volontà di Stefano Lurati di rendere omaggio al nonno, macellaio. Da quella bottega abbiamo ereditato l’occhio per il taglio giusto, il rispetto per la materia prima e la convinzione che la qualità non si improvvisa.</p>
+        <p>Oggi la stessa cura arriva in tavola: carni scelte una a una e frollate con pazienza, pasta artigianale tirata in casa, piatti che seguono le stagioni. Una conduzione familiare, dove chi ti accoglie conosce ogni piatto, e dove i dettagli (la sala, la mise en place, persino i grembiuli) raccontano chi siamo.</p>
+        <ul class="timeline">
+          <li><span>1927</span>Il nonno Lucio, macellaio</li>
+          <li><span>Oggi</span>Stefano e la famiglia, al Bistró</li>
+        </ul>
+      </div>
     </div>
   </div>
-</section>
-
-<!-- ============ QUOTE BAND ============ -->
-<section class="band">
-  <div class="band__media photo" style="--img:url('/assets/img/brace.jpg')" aria-hidden="true"></div>
-  <div class="band__veil"></div>
-  <blockquote class="band__quote wrap reveal">
-    <p>“La qualità della carne si decide molto prima che arrivi in cucina.”</p>
-  </blockquote>
 </section>
 
 <!-- ============ CARNE ============ -->
 <section class="meat" id="carne">
   <div class="wrap">
-    <header class="section-head reveal">
-      <p class="eyebrow">La passione di casa</p>
-      <h2>La carne, <em>al suo tempo.</em></h2>
-      <p class="section-head__lead">Lavoriamo con carni dai tempi di frollatura diversi, perché ogni taglio ha il suo carattere. Scegli il tuo, noi ti consigliamo la cottura.</p>
+    <header class="section-head section-head--light reveal">
+      <svg class="orn orn--small" aria-hidden="true"><use href="#orn"/></svg>
+      <h2>La carne</h2>
+      <p class="section-head__lead">Lo sguardo del macellaio, in cucina. Selezioniamo tagli diversi per razza e tempo di frollatura, e ti consigliamo al tavolo quello giusto per te.</p>
     </header>
 
+    <div class="meat__feature">
+      <figure class="meat__img reveal">
+        <img src="assets/img/tartare.jpg" alt="Battuta di Fassona Piemontese al coltello con soffice di zucca e crumble ai porcini" loading="lazy">
+      </figure>
+      <div class="meat__text reveal">
+        <p class="eyebrow eyebrow--light">Il piatto della stagione</p>
+        <h3 class="caps">Battuta di Fassona Piemontese al coltello</h3>
+        <p class="meat__desc">Soffice di zucca e crumble ai porcini.</p>
+        <p class="muted-light">Tagliata a mano, condita al momento: il modo più sincero per assaggiare una carne di qualità.</p>
+      </div>
+    </div>
+
     <div class="aging reveal" aria-label="Tempi di frollatura">
+      <p class="eyebrow eyebrow--light">La frollatura</p>
       <div class="aging__tabs" role="tablist">
-        <button role="tab" aria-selected="true" data-age="0">21 giorni</button>
-        <button role="tab" aria-selected="false" data-age="1">35 giorni</button>
-        <button role="tab" aria-selected="false" data-age="2">45 giorni</button>
-        <button role="tab" aria-selected="false" data-age="3">60+ giorni</button>
+        <button role="tab" aria-selected="true" data-age="0">Breve</button>
+        <button role="tab" aria-selected="false" data-age="1">Media</button>
+        <button role="tab" aria-selected="false" data-age="2">Lunga</button>
+        <button role="tab" aria-selected="false" data-age="3">Extra</button>
       </div>
       <div class="aging__track"><span class="aging__fill"></span></div>
-      <div class="aging__panel" role="tabpanel" aria-live="polite">
-        <h3 class="aging__title">Fresca e succosa</h3>
-        <p class="aging__desc">Sapore pulito, fibra tenera, il gusto più vicino alla carne appena tagliata. Perfetta per tartare e carpacci.</p>
+      <div class="aging__panel" aria-live="polite">
+        <h4 class="aging__title">Fresca e succosa</h4>
+        <p class="aging__desc">Sapore pulito e fibra tenera: il gusto più vicino alla carne appena tagliata. Ideale per battute e carpacci.</p>
       </div>
     </div>
 
     <div class="cuts">
       <article class="cut reveal">
-        <div class="photo cut__img" style="--img:url('/assets/img/fassona.jpg')" role="img" aria-label="Fassona piemontese"></div>
-        <div class="cut__body">
-          <span class="cut__origin">Piemonte</span>
-          <h3>Fassona piemontese</h3>
-          <p>Magra e delicata: la protagonista di tartare, battute al coltello e dei nostri plin.</p>
-        </div>
+        <span class="cut__num">I</span>
+        <h3>Costata &amp; tomahawk</h3>
+        <p>Sull’osso, alla griglia, con patate al forno. Da dividere.</p>
       </article>
       <article class="cut reveal">
-        <div class="photo cut__img" style="--img:url('/assets/img/rubia-gallega.jpg')" role="img" aria-label="Rubia Gallega"></div>
-        <div class="cut__body">
-          <span class="cut__origin">Galizia, Spagna</span>
-          <h3>Rubia Gallega</h3>
-          <p>Bovini adulti, grasso giallo e profumato: frollatura lunga, sapore intenso.</p>
-        </div>
+        <span class="cut__num">II</span>
+        <h3>Fassona piemontese</h3>
+        <p>Magra e delicata: battute al coltello e ripieni della pasta fresca.</p>
       </article>
       <article class="cut reveal">
-        <div class="photo cut__img" style="--img:url('/assets/img/tbone.jpg')" role="img" aria-label="T-bone alla brace"></div>
-        <div class="cut__body">
-          <span class="cut__origin">Da condividere</span>
-          <h3>T-bone da 800 g</h3>
-          <p>Filetto e controfiletto sull’osso, cotto con precisione e servito già porzionato.</p>
-        </div>
+        <span class="cut__num">III</span>
+        <h3>Il burger del macellaio</h3>
+        <p>Macinato da noi, pane morbido, chips croccanti.</p>
       </article>
       <article class="cut reveal">
-        <div class="photo cut__img" style="--img:url('/assets/img/wagyu.jpg')" role="img" aria-label="Wagyu giapponese"></div>
-        <div class="cut__body">
-          <span class="cut__origin">Giappone</span>
-          <h3>Wagyu &amp; Black Angus</h3>
-          <p>Marezzature fini e consistenze burrose, per chi vuole un’esperienza diversa.</p>
-        </div>
+        <span class="cut__num">IV</span>
+        <h3>Selezioni speciali</h3>
+        <p>Rubia Gallega, Black Angus, Wagyu: chiedi cosa c’è oggi in cella.</p>
       </article>
     </div>
-    <p class="note reveal">La selezione dei tagli cambia in base alla disponibilità: chiedi in sala cosa c’è oggi in cella.</p>
   </div>
 </section>
 
@@ -215,175 +216,165 @@
 <section class="menu" id="menu">
   <div class="wrap">
     <header class="section-head reveal">
-      <p class="eyebrow">Menù stagionale</p>
-      <h2>Autunno <em>&amp; inverno</em></h2>
-      <p class="section-head__lead">Una selezione dei piatti più amati. Il menù cambia con le stagioni: quello del giorno ti aspetta al tavolo.</p>
+      <svg class="orn orn--small orn--bronze" aria-hidden="true"><use href="#orn"/></svg>
+      <h2>Nuovo menù</h2>
+      <p class="section-head__lead">Il menù cambia con le stagioni. Qui una selezione dei piatti di questi mesi: il resto ti aspetta al tavolo.</p>
     </header>
 
     <div class="menu__filters reveal" role="group" aria-label="Filtra il menù">
       <button class="chip is-active" data-filter="all">Tutto</button>
       <button class="chip" data-filter="veg"><span class="leaf" aria-hidden="true"></span>Vegetariano</button>
-      <button class="chip" data-filter="house">Fatto in casa</button>
+      <button class="chip" data-filter="house">Pasta artigianale</button>
     </div>
 
-    <div class="menu__grid">
-      <div class="menu__col reveal">
-        <h3 class="menu__cat">Per iniziare</h3>
-        <ul class="dishes">
-          <li class="dish" data-tags="house">
-            <div class="dish__row"><span class="dish__name">Vitello tonnato</span></div>
-            <p class="dish__desc">Girello rosa, salsa tonnata della casa, capperi.</p>
-          </li>
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">Tartare di Fassona</span></div>
-            <p class="dish__desc">Battuta al coltello, condita al momento.</p>
-          </li>
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">Tartare di tonno</span></div>
-            <p class="dish__desc">Tonno crudo, agrumi, olio extravergine.</p>
-          </li>
-          <li class="dish" data-tags="house">
-            <div class="dish__row"><span class="dish__name">Frisella, stracciatella e lardo Pata Negra</span></div>
-            <p class="dish__desc">Croccante, cremosa e sapida.</p>
-          </li>
-          <li class="dish" data-tags="veg">
-            <div class="dish__row"><span class="dish__name">Tapas di melanzane</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Melanzane, pomodoro e formaggio fuso.</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="menu__col reveal">
-        <h3 class="menu__cat">Primi, pasta fatta a mano</h3>
-        <ul class="dishes">
-          <li class="dish" data-tags="house">
-            <div class="dish__row"><span class="dish__name">Plin di Fassona</span><span class="badge">Il piatto di casa</span></div>
-            <p class="dish__desc">Piccoli ravioli pizzicati a mano, ripieno di brasato, fondo bruno.</p>
-          </li>
-          <li class="dish" data-tags="house veg">
-            <div class="dish__row"><span class="dish__name">Maltagliati al tartufo</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Pasta fresca, burro di montagna, tartufo di stagione.</p>
-          </li>
-          <li class="dish" data-tags="house veg">
-            <div class="dish__row"><span class="dish__name">Tagliolini cacio e pepe</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Pecorino, pepe tostato, mantecatura al momento.</p>
-          </li>
-          <li class="dish" data-tags="veg">
-            <div class="dish__row"><span class="dish__name">Risotto alla barbabietola</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Carnaroli, barbabietola, formaggio delle valli.</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="menu__col reveal">
-        <h3 class="menu__cat">Dalla cella</h3>
-        <ul class="dishes">
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">Rubia Gallega frollata</span></div>
-            <p class="dish__desc">Costata o controfiletto, al peso.</p>
-          </li>
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">T-bone 800 g</span></div>
-            <p class="dish__desc">Per due, con contorni di stagione.</p>
-          </li>
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">Filetto mignon</span></div>
-            <p class="dish__desc">Cuore di filetto, riduzione al vino rosso.</p>
-          </li>
-          <li class="dish" data-tags="">
-            <div class="dish__row"><span class="dish__name">Black Angus · Wagyu</span></div>
-            <p class="dish__desc">Secondo disponibilità, chiedi in sala.</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="menu__col reveal">
-        <h3 class="menu__cat">Dolci</h3>
-        <ul class="dishes">
-          <li class="dish" data-tags="house veg">
-            <div class="dish__row"><span class="dish__name">Dolce “del bosco”</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Frutti di bosco, crema e croccante.</p>
-          </li>
-          <li class="dish" data-tags="house veg">
-            <div class="dish__row"><span class="dish__name">I dolci del giorno</span><span class="leaf" title="Vegetariano"></span></div>
-            <p class="dish__desc">Preparati ogni mattina, cambiano con la stagione.</p>
-          </li>
-        </ul>
-        <div class="menu__aside">
-          <p><span class="leaf" aria-hidden="true"></span> Piatto vegetariano</p>
-          <p>Segnalaci allergie e intolleranze: adattiamo volentieri i piatti.</p>
+    <div class="menu__layout">
+      <div class="menu__list">
+        <div class="menu__group reveal">
+          <h3 class="menu__cat">Per iniziare</h3>
+          <ul class="dishes">
+            <li class="dish" data-tags="" data-img="assets/img/tartare.jpg">
+              <span class="dish__name">Battuta di Fassona Piemontese al coltello</span>
+              <span class="dish__desc">Soffice di zucca, crumble ai porcini</span>
+            </li>
+            <li class="dish" data-tags="" data-img="assets/img/salumi.jpg">
+              <span class="dish__name">Tagliere di salumi e formaggi</span>
+              <span class="dish__desc">Selezione del macellaio, miele, noci</span>
+            </li>
+            <li class="dish" data-tags="" data-img="assets/img/ig-prosciutto.jpg">
+              <span class="dish__name">Prosciutto e melone in osmosi</span>
+              <span class="dish__desc">Caprino e crumble di tarallo al finocchietto</span>
+            </li>
+            <li class="dish" data-tags="veg" data-img="assets/img/zuppa.jpg">
+              <span class="dish__name">La zuppa di stagione <span class="leaf" title="Vegetariano"></span></span>
+              <span class="dish__desc">Servita in cocotte, con crostone</span>
+            </li>
+          </ul>
         </div>
+
+        <div class="menu__group reveal">
+          <h3 class="menu__cat">Pasta artigianale</h3>
+          <ul class="dishes">
+            <li class="dish" data-tags="house" data-img="assets/img/pasta-ragu.jpg">
+              <span class="dish__name">Pappardelle artigianali al ragù di cervo</span>
+              <span class="dish__desc">Ragù cotto lentamente, come una volta</span>
+            </li>
+            <li class="dish" data-tags="house" data-img="assets/img/casarecce.jpg">
+              <span class="dish__name">Casarecce artigianali</span>
+              <span class="dish__desc">Al ragù d’anatra e polvere di alloro</span>
+            </li>
+            <li class="dish" data-tags="house veg" data-img="assets/img/ravioli.jpg">
+              <span class="dish__name">Ravioli in crema <span class="leaf" title="Vegetariano"></span></span>
+              <span class="dish__desc">Crema delicata e nocciole tostate</span>
+            </li>
+            <li class="dish" data-tags="house" data-img="assets/img/paccheri.jpg">
+              <span class="dish__name">Paccheri con cialda di Parmigiano</span>
+              <span class="dish__desc">Ragù bianco della casa</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__group reveal">
+          <h3 class="menu__cat">Dalla macelleria</h3>
+          <ul class="dishes">
+            <li class="dish" data-tags="" data-img="assets/img/hero.jpg">
+              <span class="dish__name">Costata con osso</span>
+              <span class="dish__desc">Alla griglia, patate al forno, al peso</span>
+            </li>
+            <li class="dish" data-tags="" data-img="assets/img/burger.jpg">
+              <span class="dish__name">Il burger del macellaio</span>
+              <span class="dish__desc">Pane morbido, chips, insalatina</span>
+            </li>
+            <li class="dish" data-tags="" data-img="assets/img/tartare.jpg">
+              <span class="dish__name">Selezioni frollate</span>
+              <span class="dish__desc">Secondo disponibilità: chiedi in sala</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__group reveal">
+          <h3 class="menu__cat">Dolci</h3>
+          <ul class="dishes">
+            <li class="dish" data-tags="veg" data-img="assets/img/dolce-fragola.jpg">
+              <span class="dish__name">Fragola, crema e crumble <span class="leaf" title="Vegetariano"></span></span>
+              <span class="dish__desc">Fatto in casa</span>
+            </li>
+            <li class="dish" data-tags="veg" data-img="assets/img/dolce-cioccolato.jpg">
+              <span class="dish__name">Cioccolato e agrumi canditi <span class="leaf" title="Vegetariano"></span></span>
+              <span class="dish__desc">Fatto in casa</span>
+            </li>
+          </ul>
+        </div>
+        <p class="menu__note reveal"><span class="leaf" aria-hidden="true"></span> Piatto vegetariano · Segnalaci allergie e intolleranze: adattiamo volentieri i piatti.</p>
       </div>
+
+      <aside class="menu__preview" aria-hidden="true">
+        <div class="menu__frame">
+          <img src="assets/img/tartare.jpg" alt="" class="menu__previewimg">
+          <svg class="orn orn--frame" aria-hidden="true"><use href="#orn"/></svg>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- ============ VEGETARIANO ============ -->
-<section class="green" id="verde">
+<!-- ============ NON SOLO CARNE ============ -->
+<section class="green" id="non-solo">
   <div class="wrap green__grid">
+    <figure class="green__img reveal">
+      <img src="assets/img/fiori-zucca.jpg" alt="Fiori di zucca fritti su crema, uno dei fuori menù" loading="lazy">
+    </figure>
     <div class="green__text reveal">
-      <p class="eyebrow">Non solo carne</p>
-      <h2>Stessa cura,<br><em>senza carne.</em></h2>
-      <p class="lead">Amiamo la carne, ma non chiediamo a nessuno di mangiarla. Ogni stagione il menù ha piatti vegetariani pensati come piatti veri, non come ripieghi: paste fatte a mano, verdure dell’orto, formaggi delle valli.</p>
-      <p>Al tavolo con chi ama la bistecca può sedersi chi non la mangia: si esce contenti entrambi.</p>
+      <p class="eyebrow">Fuori menù &amp; vegetariano</p>
+      <h2>…e non solo<br>carne</h2>
+      <p class="lead">Oltre alla carta, proponiamo sfiziosi fuori menù preparati con ingredienti freschi, secondo disponibilità.</p>
+      <p>Amiamo la carne, ma non la imponiamo a nessuno. Ogni stagione ci sono piatti vegetariani pensati come piatti veri, con la stessa cura: pasta artigianale, verdure di stagione, formaggi delle valli. Allo stesso tavolo, chi ordina la costata e chi no escono contenti entrambi.</p>
       <a href="#menu" class="link-arrow" data-veg-link>Vedi i piatti vegetariani</a>
     </div>
-    <div class="green__media reveal">
-      <div class="photo" style="--img:url('/assets/img/vegetariano.jpg')" role="img" aria-label="Un piatto vegetariano"></div>
-    </div>
   </div>
 </section>
 
-<!-- ============ IL LOCALE ============ -->
-<section class="place" id="locale">
-  <div class="wrap">
-    <header class="section-head section-head--split reveal">
-      <div>
-        <p class="eyebrow">Il locale</p>
-        <h2>I dettagli <em>fanno la differenza.</em></h2>
-      </div>
-      <p class="section-head__lead">Una sala raccolta nel centro storico di Porlezza, a due passi dal lago. La pulizia, la luce, la mise en place: tutto è curato come a casa nostra, perché lo è.</p>
-    </header>
-
-    <div class="gallery">
-      <figure class="gallery__item gallery__item--a reveal"><div class="photo" style="--img:url('/assets/img/sala-1.jpg')" role="img" aria-label="La sala"></div></figure>
-      <figure class="gallery__item gallery__item--b reveal"><div class="photo" style="--img:url('/assets/img/piatto-1.jpg')" role="img" aria-label="Un piatto"></div></figure>
-      <figure class="gallery__item gallery__item--c reveal"><div class="photo" style="--img:url('/assets/img/tavolo.jpg')" role="img" aria-label="La mise en place"></div></figure>
-      <figure class="gallery__item gallery__item--d reveal"><div class="photo" style="--img:url('/assets/img/piatto-2.jpg')" role="img" aria-label="Pasta fatta in casa"></div></figure>
-      <figure class="gallery__item gallery__item--e reveal"><div class="photo" style="--img:url('/assets/img/sala-2.jpg')" role="img" aria-label="Dettaglio della sala"></div></figure>
+<!-- ============ CORTILE ============ -->
+<section class="court" id="cortile">
+  <div class="court__grid">
+    <figure class="court__img court__img--a reveal"><img src="assets/img/cortile-2.jpg" alt="Un calice di bianco versato nel cortile, tra piante e cactus" loading="lazy"></figure>
+    <div class="court__text reveal">
+      <svg class="orn orn--small" aria-hidden="true"><use href="#orn"/></svg>
+      <h2>Il cortile</h2>
+      <p class="lead">Un angolo verde nel centro storico di Porlezza, a due passi dal lago. Nella bella stagione si pranza e si cena all’aperto, tra piante, luce naturale e un calice di vino.</p>
+      <p class="muted-light">Dentro, la sala: muri in pietra, parquet a spina di pesce, luce calda. Pulita e in ordine a ogni servizio, perché per noi l’accoglienza comincia da lì.</p>
     </div>
+    <figure class="court__img court__img--b reveal"><img src="assets/img/cortile-1.jpg" alt="Focaccia farcita servita nel cortile, con un bicchiere di birra" loading="lazy"></figure>
+  </div>
+</section>
 
-    <ul class="promises reveal">
-      <li><strong>Sala sempre in ordine</strong><span>Pulizia e cura, a ogni servizio.</span></li>
-      <li><strong>Pochi coperti</strong><span>Per seguirti con attenzione.</span></li>
-      <li><strong>Centro storico</strong><span>A due passi dal lungolago.</span></li>
-      <li><strong>Accessibile</strong><span>Ingresso senza barriere.</span></li>
+<!-- ============ DETTAGLI ============ -->
+<section class="details">
+  <div class="wrap">
+    <ul class="details__list">
+      <li class="reveal"><strong>Conduzione familiare</strong><span>Chi ti accoglie conosce ogni piatto.</span></li>
+      <li class="reveal"><strong>Macellai dal 1927</strong><span>La carne la scegliamo noi, da sempre.</span></li>
+      <li class="reveal"><strong>Pasta artigianale</strong><span>Tirata in casa, ogni giorno.</span></li>
+      <li class="reveal"><strong>Menù stagionali</strong><span>Ingredienti al loro momento migliore.</span></li>
     </ul>
-
-    <div class="ig reveal">
-      <p>Ogni giorno in cucina, su Instagram</p>
-      <a href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener" class="ig__handle">@bistro_lurati</a>
-    </div>
   </div>
 </section>
 
-<!-- ============ RECENSIONI ============ -->
-<section class="reviews">
+<!-- ============ INSTAGRAM ============ -->
+<section class="ig" id="instagram">
   <div class="wrap">
-    <p class="eyebrow eyebrow--center reveal">Dicono di noi</p>
-    <div class="reviews__grid">
-      <figure class="review reveal">
-        <blockquote>“Locale curato a due passi dal lago.”</blockquote>
-        <figcaption>Recensione su Tripadvisor</figcaption>
-      </figure>
-      <figure class="review reveal">
-        <blockquote>“Eccezionale.”</blockquote>
-        <figcaption>Recensione su Tripadvisor</figcaption>
-      </figure>
-      <figure class="review reveal">
-        <blockquote>“Carne con una frollatura ottima e cottura perfetta.”</blockquote>
-        <figcaption>Recensione su Tripadvisor</figcaption>
-      </figure>
+    <header class="ig__head reveal">
+      <p class="eyebrow eyebrow--center">Seguici</p>
+      <a href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener" class="ig__handle">@bistro_lurati</a>
+    </header>
+    <div class="ig__grid">
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/burger.jpg" alt="Il burger del macellaio servito in sala" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/pasta-ragu.jpg" alt="Pappardelle artigianali al ragù di cervo" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/salumi.jpg" alt="Tagliere di salumi e formaggi" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/dolce-fragola.jpg" alt="Dolce alla fragola" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/ig-prosciutto.jpg" alt="Prosciutto e melone in osmosi" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/paccheri.jpg" alt="Paccheri con cialda di Parmigiano" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/dolce-cioccolato.jpg" alt="Dolce al cioccolato" loading="lazy"></a>
+      <a class="ig__tile reveal" href="https://www.instagram.com/bistro_lurati/" target="_blank" rel="noopener"><img src="assets/img/zuppa.jpg" alt="Zuppa in cocotte con un calice di rosso" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -392,13 +383,13 @@
 <section class="contact" id="contatti">
   <div class="wrap contact__grid">
     <div class="contact__info reveal">
-      <p class="eyebrow eyebrow--light">Prenota</p>
-      <h2>Ti aspettiamo<br><em>a tavola.</em></h2>
+      <svg class="orn orn--small" aria-hidden="true"><use href="#orn"/></svg>
+      <h2>Prenota<br>il tuo tavolo</h2>
       <p class="lead">I coperti sono pochi: ti consigliamo di prenotare, soprattutto nel fine settimana.</p>
 
       <div class="contact__actions">
         <a href="tel:+393471107745" class="btn btn--light">Chiama +39 347 110 7745</a>
-        <a href="https://wa.me/393471107745?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Bistr%C3%B2%20Lurati" class="btn btn--ghost-light" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+        <a href="https://wa.me/393471107745?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo%20al%20Bistr%C3%B3%20Lurati" class="btn btn--ghost" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
       </div>
 
       <dl class="facts">
@@ -408,7 +399,7 @@
         </div>
         <div>
           <dt>Orari</dt>
-          <dd>Pranzo e cena<br><span class="muted">Chiuso il mercoledì</span></dd>
+          <dd>Pranzo e cena<br><span class="muted-light">Chiuso il mercoledì</span></dd>
         </div>
         <div>
           <dt>Seguici</dt>
@@ -417,7 +408,7 @@
       </dl>
     </div>
     <div class="contact__map reveal">
-      <iframe title="Mappa: Bistrò Lurati, Via Garibaldi 10, Porlezza" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      <iframe title="Mappa: Bistró Lurati, Via Garibaldi 10, Porlezza" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Bistro%20Lurati%2C%20Via%20Giuseppe%20Garibaldi%2010%2C%2022018%20Porlezza%20CO&z=16&output=embed"></iframe>
       <a class="link-arrow link-arrow--light" href="https://www.google.com/maps/search/?api=1&query=Bistro+Lurati+Via+Garibaldi+10+Porlezza" target="_blank" rel="noopener">Indicazioni stradali</a>
     </div>
@@ -428,11 +419,14 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <div>
-      <p class="brand__name">Bistrò Lurati</p>
-      <p class="muted">Via Giuseppe Garibaldi 10 · 22018 Porlezza (CO)</p>
+    <div class="footer__brand">
+      <svg class="orn orn--tiny" aria-hidden="true"><use href="#orn"/></svg>
+      <span class="wordmark wordmark--footer">
+        <span class="wordmark__line">Bistr<span class="o-dot">Ó</span> Lurati</span>
+        <span class="wordmark__tag">Macellai dal 1927</span>
+      </span>
     </div>
-    <p class="muted footer__small">© <span id="year">2026</span> Bistrò Lurati · <a href="#top">Torna su</a></p>
+    <p class="footer__small">Via Giuseppe Garibaldi 10 · 22018 Porlezza (CO) · +39 347 110 7745<br>© <span id="year">2026</span> Bistró Lurati · <a href="#top">Torna su</a></p>
   </div>
 </footer>
 
