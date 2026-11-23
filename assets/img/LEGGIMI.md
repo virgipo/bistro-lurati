@@ -11,5 +11,5 @@ Per la versione definitiva sostituiscile con gli **originali** mantenendo **gli 
 | stefano.jpg | "Puntiamo sulla qualità" |
 | tartare.jpg | La carne + menù |
 | fiori-zucca.jpg | …e non solo carne |
-| cortile-1.jpg, cortile-2.jpg | Il cortile |
+| cortile-2.jpg | Eventi (calice di vino) |
 | salumi, ig-prosciutto, zuppa, pasta-ragu, casarecce, ravioli, paccheri, burger, dolce-fragola, dolce-cioccolato | Menù e griglia Instagram |

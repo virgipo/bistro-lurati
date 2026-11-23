@@ -12,11 +12,11 @@
     },
     en: {
       title: 'Bistró Lurati · Porlezza — Butchers since 1927',
-      desc: 'Bistró Lurati, in the heart of Porlezza on Lake Lugano: a family-run bistro by a family of butchers since 1927. Selected meat, homemade pasta, seasonal dishes, a courtyard and private events.'
+      desc: 'Bistró Lurati, in the heart of Porlezza on Lake Lugano: a family-run bistro by a family of butchers since 1927. Selected meat, homemade pasta, seasonal dishes and private events.'
     },
     de: {
       title: 'Bistró Lurati · Porlezza — Metzger seit 1927',
-      desc: 'Bistró Lurati im Herzen von Porlezza am Luganersee: ein Familienbistro einer Metzgerfamilie seit 1927. Ausgewähltes Fleisch, hausgemachte Pasta, saisonale Gerichte, ein Innenhof und private Events.'
+      desc: 'Bistró Lurati im Herzen von Porlezza am Luganersee: ein Familienbistro einer Metzgerfamilie seit 1927. Ausgewähltes Fleisch, hausgemachte Pasta, saisonale Gerichte und private Events.'
     }
   };
   const translatable = $$('[data-en]');
@@ -104,3 +104,10 @@
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* ---- Torna su: l'header è fisso, quindi scorriamo noi in cima ---- */
+document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  history.replaceState(null, '', location.pathname + location.search);
+}));
