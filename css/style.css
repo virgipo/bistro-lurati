@@ -470,3 +470,6 @@ p { margin: 0 0 1.1em; }
 /* Leggibilità del menù sopra la foto */
 .nav::before { content: ""; position: absolute; inset: 0 0 -30px 0; background: linear-gradient(180deg, rgba(10,12,17,.55), transparent); pointer-events: none; z-index: -1; transition: opacity .4s var(--ease); }
 .nav.is-solid::before, .nav.is-open::before { opacity: 0; }
+.lang { background: rgba(14,26,51,.72); border: 1px solid rgba(241,232,216,.25); border-radius: 100px; padding: 2px 12px; }
+.nav.is-solid .lang { background: transparent; }
+.lang__btn { opacity: .7; }
